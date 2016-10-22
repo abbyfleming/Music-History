@@ -1,13 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 
-<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
 <body>
+<div id="wrapper">
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">List Music</a></li>
+				<li><a href="add-music.html">Add Music</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<aside>
+
+	<label>Song Length:</label>
+	<div class="placeholder"></div>
+
+	<label>Artist:</label>
+	<select name="artist">
+		<option>Jon Bryant</option>
+		<option>The Kite String Trangles</option>
+		<option>Vancouver Sleep Clinic</option>
+		<option>The Staves</option>
+		<option>Dustin Tebbut</option>
+	</select>
+
+	<label>Album:</label>
+	<select name="album">
+		<option>Twenty Something</option>
+		<option>Vessel</option>
+		<option>Winter</option>
+		<option>If I Was</option>
+		<option>The Breach EP</option>
+	</select>
+
+	<fieldset>
+	<legend>Genre:</legend>
+	
+		<div class="halfWidth">
+		<label>
+			<input type="checkbox" name="folk" value="folk">
+			Folk
+		</label>
+
+		<label>
+			<input type="checkbox" name="indie" value="indie">
+			Indie
+		</label>
+
+		<label>
+			<input type="checkbox" name="songwriter" value="songwriter">
+			Songwriter
+		</label>
+		</div>
+
+		<label>
+			<input type="checkbox" name="alternative" value="alternative">
+			Alternative
+		</label>
+
+		<label>
+			<input type="checkbox" name="pop" value="pop">
+			Pop
+		</label>
+		
+		<label>
+			<input type="checkbox" name="classical" value="classical">
+			Classical
+		</label>
+
+		</fieldset>
+
+		<button id="filter">Filter</button>
+
+	</aside>
+
+	<main>
+		<h2>Light</h2>
+		<ul>
+			<li>Jon Bryant</li>
+			<li>Twenty Something</li>
+			<li>Songwriter</li>
+		</ul>
+
+			<h2>Arcadia</h2>
+		<ul>
+			<li>The Kite String Tangle</li>
+			<li>Vessel</li>
+			<li>Alternative</li>
+		</ul>
 
 
+		<h2>Flaws</h2>
+		<ul>
+			<li>Vancouver Sleep Clinic</li>
+			<li>Winter</li>
+			<li>Indie</li>
+		</ul>
+
+
+		<h2>Make It Holy</h2>
+		<ul>
+			<li>The Staves</li>
+			<li>If I Was</li>
+			<li>Acoustic Folk</li>
+		</ul>
+	</main>
+	
+</div>
 </body>
 </html>
