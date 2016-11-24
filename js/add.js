@@ -22,8 +22,14 @@ function addSong(){
 	var songName = document.getElementById("songName").value;
 	var artistName = document.getElementById("artistName").value;
 	var albumName = document.getElementById("albumName").value;
+	
+	//add to the array
+	songs.push(`${songName} by ${artistName} on the album ${albumName}`);
 
-	output.innerHTML += `${songName} - by ${artistName} on the album ${albumName}`;
+	//add new songs to output
+	output.innerHTML += `<div> ${songName} - by ${artistName} on the album ${albumName} </div>`;
+
+	//console.log(songs);
 }
 
 submitBtn.addEventListener("click", addSong);
