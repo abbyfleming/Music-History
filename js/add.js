@@ -27,7 +27,7 @@ function addSong(){
 	songs.push(`${songName} by ${artistName} on the album ${albumName}`);
 
 	//add new songs to output
-	output.innerHTML += `<div> ${songName} - by ${artistName} on the album ${albumName} </div>`;
+	output.innerHTML += `<div> ${songName} - by ${artistName} on the album ${albumName} </div>`	;
 
 	//console.log(songs);
 }
