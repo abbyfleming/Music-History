@@ -2,7 +2,6 @@
 	box-sizing: border-box;
 }
 
-
 body {
 	background: #fff;
 	font-family: arial, sans-serif;
@@ -35,7 +34,7 @@ nav {
 
 }
 
-nav ul {
+/*nav ul {
 	list-style-type: none;
 }
 
@@ -46,7 +45,7 @@ nav ul li{
 nav ul li a {
 	padding: 10px;
 }
-
+*/
 
 /********* MAIN CONTENT *********/
 
@@ -94,14 +93,14 @@ main ul li:last-child {
 	border: 0;
 }
 
-form {
-	margin: 50px 0 0 200px;
-}
-
 form input {
 	margin: 10px 0;
 }
 
+
+#add-view {
+	margin: 50px 0 0 200px;
+}
 
 /********* SIDEBAR *********/
 
@@ -151,3 +150,18 @@ button {
 
 
 /********* FOOTER *********/
+
+ul > li {
+  display: inline;
+  list-style-type: none;
+  margin: 5px 15px 0 15px;
+  padding: 5px;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

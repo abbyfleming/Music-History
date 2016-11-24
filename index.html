@@ -8,15 +8,18 @@
 </head>
 <body>
 <div id="wrapper">
+	
 	<header>
 		<nav>
 			<ul>
-				<li><a href="#">List Music</a></li>
-				<li><a href="add-music.html">Add Music</a></li>
+				<li><a id="link-home" href="#" >List Music</a></li>
+				<li><a id="link-add" href="#">Add Music</a></li>
 			</ul>
 		</nav>
 	</header>
 
+
+<div id="home-view">
 	<aside>
 
 	<label>Song Length:</label>
@@ -82,13 +85,29 @@
 	</aside>
 
 	<main>
-		
 		<div id="songListDom"></div>
-
 	</main>
-	
-</div>
+</div> <!--end home-view -->
 
-<script src="songs.js"></script>
+
+<section class="hidden" id="add-view">
+		<label>Song Name:</label>
+		<input type="text" id="songName"><br>
+		
+		<label>Artist:</label>
+		<input type="text" id="artistName"><br>
+		
+		<label>Album:</label>
+		<input type="text" id="albumName"><br>
+
+		<button id="submitBtn">Add</button>
+</section>
+
+
+</div><!--end wrapper -->
+
+<script src="js/home.js"></script>
+<script src="js/add.js"></script>
+
 </body>
 </html>
