@@ -30,6 +30,8 @@ for (i = 0; i < songs.length; i++) {
 }
 
 
+
+/* ----- EVENT LISTENERS ----- */
 homeLink.addEventListener("click", function() {
   homeView.classList.add("hidden");
   addView.classList.add("hidden");
