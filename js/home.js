@@ -1,5 +1,10 @@
+console.log("home.js linked");
 
+
+var homeLink = document.getElementById("link-home");
+var homeView = document.getElementById("home-view");
 var output = document.getElementById("songListDom");
+
 var songs = [];
 
 
@@ -25,4 +30,15 @@ for (i = 0; i < songs.length; i++) {
 }
 
 
+
+
+
+homeLink.addEventListener("click", function() {
+  homeView.classList.add("hidden");
+  addView.classList.add("hidden");
+
+  homeView.classList.add("visible");
+  homeView.classList.remove("hidden");
+
+});
 
