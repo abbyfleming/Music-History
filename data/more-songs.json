@@ -1,0 +1,24 @@
+{
+  "songs": [
+    {
+      "title": "The Breach",
+      "artist": "Dustin Tebbut",
+      "album": "The Breach EP"
+    },
+    {
+      "title": "Run Wild",
+      "artist": "Laney Jones",
+      "album": "Run Wild Single"
+    },
+    {
+      "title": "Fever To The Form",
+      "artist": "Nick Mulvey",
+      "album": "Fever To The Form"
+    },
+    {
+      "title": "Tiger Striped Sky",
+      "artist": "Roo Panes",
+      "album": "Little Giant"
+    }
+  ]
+}

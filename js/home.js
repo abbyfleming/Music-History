@@ -4,6 +4,7 @@ console.log("home.js linked");
 var homeLink = document.getElementById("link-home");
 var homeView = document.getElementById("home-view");
 var output = document.getElementById("songListDom");
+var moreBtn = document.getElementById("moreBtn");
 
 
 /* ----- XHR REQUEST TO READ JSON FILE ----- */
@@ -18,6 +19,15 @@ songLoader.send();
 });
 
 
+var moreSongs = new XMLHttpRequest();
+moreSongs.open("GET", "data/more-songs.json");
+moreSongs.send();
+
+moreSongs.addEventListener("load", function() {
+  songs = JSON.parse(this.responseText).songs;
+  populatePage(songs);
+})
+
 
  /* ----- POPULATE PAGE ----- */
 
@@ -28,24 +38,35 @@ songLoader.send();
   	var getSongs = songs[i];
 
   	output.innerHTML += 
-  	`<div id="song${i}">
+  	`<div>
   		${getSongs.title} by ${getSongs.artist} on the album ${getSongs.album}
-  		<button id="delete${i}">X</button>
+  		<button class="deletebtn">X</button>
   	</div>`;
   }
 
-  addListener(songs)
+  //addMoreBtn();
+  addListener();
   //console.log(songs);
-
 }
 
-function addListener(songs){
-	for (var i = 0; i < songs.length; i++) {
+function addMoreBtn(){
+  output.innerHTML += `<button id="moreBtn">More > </button>`;
+}
 
-		var deletebtn = document.getElementById(`delete${i}`);
-		deletebtn.addEventListener("click", deleteSong);
-		//console.log(deletebtn);
-	}
+
+function addListener(){
+
+  //var deletebtn = document.getElementById(`delete${i}`);
+  var deletebtn = document.getElementsByClassName("deletebtn");
+	
+  for (var i = 0; i < deletebtn.length; i++) {      
+        deletebtn[i].addEventListener("click", deleteSong);
+        }
+
+  //   moreBtn.addEventListener("click", function(){
+  //   console.log("moreBtn");
+  // })
+
 }
 
 
@@ -65,4 +86,6 @@ homeLink.addEventListener("click", function() {
   homeView.classList.remove("hidden");
 
 });
+
+
 
