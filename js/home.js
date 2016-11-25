@@ -1,6 +1,10 @@
+"use strict";
+
 console.log("home.js linked");
 
 /* ----- DOM ELEMENTS ----- */
+var addLink = document.getElementById("link-add");
+var addView = document.getElementById("add-view");
 var homeLink = document.getElementById("link-home");
 var homeView = document.getElementById("home-view");
 
@@ -13,7 +17,7 @@ songLoader.open("GET", "data/songs.json");
 songLoader.send();
 
  songLoader.addEventListener("load", function () {
-  songs = JSON.parse(this.responseText).songs;
+  let songs = JSON.parse(this.responseText).songs;
   populatePage(songs);
 });
 }
@@ -24,7 +28,7 @@ moreSongs.open("GET", "data/more-songs.json");
 moreSongs.send();
 
 moreSongs.addEventListener("load", function() {
-  songs = JSON.parse(this.responseText).songs;
+  let songs = JSON.parse(this.responseText).songs;
   populatePage(songs);
 });
 }

@@ -1,2 +1,7 @@
 .DS_Store
 scraps
+lib/node_modules
+sass
+lib/.sass-cache
+css/styles.css
+css/styles.css.map
